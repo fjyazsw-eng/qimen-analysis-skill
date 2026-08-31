@@ -1,0 +1,13 @@
+schema_version: "0.8"
+minimum_total: 102
+minimum_by_file:
+  yongshen-scenarios.yaml: 8
+  career-scenarios.yaml: 10
+  relationship-scenarios.yaml: 12
+  commerce-scenarios.yaml: 12
+  exam-scenarios.yaml: 12
+  health-scenarios.yaml: 12
+  travel-scenarios.yaml: 12
+  lost-and-missing-scenarios.yaml: 12
+  timing-direction-scenarios.yaml: 12
+

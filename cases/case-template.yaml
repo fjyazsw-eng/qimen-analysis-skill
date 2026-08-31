@@ -1,0 +1,29 @@
+case_id: ""
+question: ""
+question_category: ""
+question_subtype: ""
+success_criterion: ""
+chart_time: ""
+system: "时家拆补转盘法"
+input_file: "input.md"
+yongshen:
+  mode: "self|proxy|multi_party"
+  decisions:
+    - role: ""
+      symbol: ""
+      palace: ""
+      priority: "primary|secondary"
+      rule_id: ""
+      source_level: "A|B|C|D"
+      reason: ""
+  overlaps: []
+  alternatives: []
+  unresolved: []
+analysis_file: "analysis.md"
+outcome_file: "outcome.md"
+review_file: "review.md"
+error_types: []
+privacy: "anonymized"
+created_at: ""
+outcome_recorded_at: ""
+skill_version: "1.0.0"
