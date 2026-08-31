@@ -1,7 +1,8 @@
-schema_version: "0.8"
-minimum_total: 110
+schema_version: "1.1.0"
+minimum_total: 122
 minimum_by_file:
   interaction-scenarios.yaml: 8
+  chart-synthesis-scenarios.yaml: 12
   yongshen-scenarios.yaml: 8
   career-scenarios.yaml: 10
   relationship-scenarios.yaml: 12
