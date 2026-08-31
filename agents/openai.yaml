@@ -1,6 +1,6 @@
 interface:
   display_name: "奇门遁甲实战分析"
   short_description: "读取结构化奇门局式，按固定证据链完成取用、分析与复盘"
-  default_prompt: "使用 $qimen-analysis-skill 分析这份已排好的结构化奇门局式，并区分盘面事实、结构标注与综合推断。"
+  default_prompt: "使用 $qimen-analysis-skill 接收这份结构化奇门局式；若我尚未提出明确问题，先核验信息并引导提问，不要直接断局。"
 policy:
   allow_implicit_invocation: true

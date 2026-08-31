@@ -41,7 +41,7 @@ error_types: []
 privacy: "anonymized"
 created_at: ""
 outcome_recorded_at: ""
-skill_version: "1.0.0"
+skill_version: "1.0.1"
 ```
 
 `error_types` 只能从以下值选择：`取用错误`、`旺衰错误`、`生克关系错误`、`特殊状态误判`、`应期错误`、`过度推断`、`信息不足`。无偏差时为空数组。

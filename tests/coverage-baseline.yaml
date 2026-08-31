@@ -1,6 +1,7 @@
 schema_version: "0.8"
-minimum_total: 102
+minimum_total: 110
 minimum_by_file:
+  interaction-scenarios.yaml: 8
   yongshen-scenarios.yaml: 8
   career-scenarios.yaml: 10
   relationship-scenarios.yaml: 12
@@ -10,4 +11,3 @@ minimum_by_file:
   travel-scenarios.yaml: 12
   lost-and-missing-scenarios.yaml: 12
   timing-direction-scenarios.yaml: 12
-
