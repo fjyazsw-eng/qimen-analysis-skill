@@ -17,11 +17,18 @@ REQUIRED_CASE_FIELDS = {
     "question_category",
     "question_subtype",
     "success_criterion",
+    "target_event",
+    "event_chain_stage",
     "chart_time",
     "system",
     "input_file",
     "yongshen",
     "analysis_file",
+    "prediction_ledger_file",
+    "qualitative_rating",
+    "timing_windows",
+    "prediction_confidence",
+    "invalidation_conditions",
     "outcome_file",
     "review_file",
     "error_types",
@@ -195,6 +202,62 @@ class Validator:
         if not re.search(r"(?m)^accuracy_claim_allowed:\s*false\s*$", registry):
             self.error("empty real-case registry must disable accuracy claims")
 
+    def validate_v12_contract(self) -> None:
+        required = [
+            "rules/qualitative-rating.md",
+            "rules/future-event-tree.md",
+            "rules/timing.md",
+            "rules/multi-chart-comparison.md",
+            "rules/strategy-engine.md",
+            "rules/event-chain-templates.md",
+            "rules/rule-confidence.md",
+            "cases/prediction-ledger.md",
+        ]
+        for relative in required:
+            if not (self.root / relative).is_file():
+                self.error(f"missing V1.2 authority file: {relative}")
+
+        version = self.read(self.root / "VERSION").strip()
+        if version != "1.2.0":
+            self.error(f"VERSION must be 1.2.0, found {version!r}")
+
+        standard = self.read(self.root / "output" / "standard-analysis.md")
+        expected_headings = [
+            "# 一、问题、核验与取用",
+            "# 二、整体局势",
+            "# 三、核心人物 / 事情状态",
+            "# 四、关键关系与动力",
+            "# 五、有利因素",
+            "# 六、不利因素",
+            "# 七、未来趋势",
+            "# 八、关键转折条件",
+            "# 九、应期与时间窗口",
+            "# 十、趋吉避凶策略",
+            "# 十一、风险与不确定性",
+            "# 十二、大白话结论",
+        ]
+        positions = [standard.find(item) for item in expected_headings]
+        if any(position < 0 for position in positions):
+            self.error("standard output is missing one or more locked V1.2 headings")
+        elif positions != sorted(positions):
+            self.error("standard output V1.2 headings are out of order")
+        rating_position = standard.find("【定性评价】")
+        if rating_position < 0 or (positions and rating_position > positions[0]):
+            self.error("qualitative rating must precede the first formal heading")
+
+        rating = self.read(self.root / "rules" / "qualitative-rating.md")
+        for level in ("大吉", "吉", "小吉", "平偏吉", "平", "平偏凶", "小凶", "凶", "大凶"):
+            if level not in rating:
+                self.error(f"qualitative rating is missing level: {level}")
+
+        timing = self.read(self.root / "rules" / "timing.md")
+        for phrase in ("目标事件 E", "连续触宫", "最多三个", "置信度", "现实验证信号", "失效条件"):
+            if phrase not in timing:
+                self.error(f"timing V1 is missing required concept: {phrase}")
+        for deprecated in ("当前仍未建立经过案例回归的具体算法", "应期算法未来启用前"):
+            if deprecated in timing:
+                self.error(f"deprecated V1.1 timing rule remains: {deprecated}")
+
     def run(self) -> int:
         if not self.root.is_dir():
             print(f"ERROR: skill directory does not exist: {self.root}", file=sys.stderr)
@@ -203,6 +266,7 @@ class Validator:
         self.validate_skill_entrypoint()
         self.validate_scenarios()
         self.validate_case_schema()
+        self.validate_v12_contract()
         if self.errors:
             print(f"Skill validation failed with {len(self.errors)} error(s):")
             for error in self.errors:

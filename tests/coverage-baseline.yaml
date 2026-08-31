@@ -1,5 +1,5 @@
-schema_version: "1.1.0"
-minimum_total: 122
+schema_version: "1.2.0"
+minimum_total: 156
 minimum_by_file:
   interaction-scenarios.yaml: 8
   chart-synthesis-scenarios.yaml: 12
@@ -12,3 +12,6 @@ minimum_by_file:
   travel-scenarios.yaml: 12
   lost-and-missing-scenarios.yaml: 12
   timing-direction-scenarios.yaml: 12
+  prediction-strategy-scenarios.yaml: 12
+  timing-scenarios.yaml: 12
+  multi-chart-scenarios.yaml: 10
