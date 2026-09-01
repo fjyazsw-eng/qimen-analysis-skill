@@ -212,14 +212,15 @@ class Validator:
             "rules/event-chain-templates.md",
             "rules/rule-confidence.md",
             "cases/prediction-ledger.md",
+            "modules/commerce/stock-ten-day-forecast.md",
         ]
         for relative in required:
             if not (self.root / relative).is_file():
                 self.error(f"missing V1.2 authority file: {relative}")
 
         version = self.read(self.root / "VERSION").strip()
-        if version != "1.2.0":
-            self.error(f"VERSION must be 1.2.0, found {version!r}")
+        if version != "1.2.1":
+            self.error(f"VERSION must be 1.2.1, found {version!r}")
 
         standard = self.read(self.root / "output" / "standard-analysis.md")
         expected_headings = [
@@ -257,6 +258,21 @@ class Validator:
         for deprecated in ("当前仍未建立经过案例回归的具体算法", "应期算法未来启用前"):
             if deprecated in timing:
                 self.error(f"deprecated V1.1 timing rule remains: {deprecated}")
+
+        stock = self.read(
+            self.root / "modules" / "commerce" / "stock-ten-day-forecast.md"
+        )
+        for phrase in (
+            "【未来十个交易日总览】",
+            "【十个交易日逐日预测】",
+            "| T+1 |",
+            "| T+10 |",
+            "强势上行",
+            "明显下行",
+            "六爻世应",
+        ):
+            if phrase not in stock:
+                self.error(f"stock ten-day forecast is missing required contract: {phrase}")
 
     def run(self) -> int:
         if not self.root.is_dir():

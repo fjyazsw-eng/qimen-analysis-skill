@@ -49,7 +49,7 @@ error_types: []
 privacy: "anonymized"
 created_at: ""
 outcome_recorded_at: ""
-skill_version: "1.2.0"
+skill_version: "1.2.1"
 ```
 
 `error_types` 只能从以下值选择：`问题定义错误`、`取用错误`、`旺衰错误`、`生克关系错误`、`特殊状态误判`、`趋势错误`、`应期错误`、`策略错误`、`过度推断`、`信息不足`。无偏差时为空数组。

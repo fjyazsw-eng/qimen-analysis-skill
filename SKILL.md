@@ -47,7 +47,7 @@ description: 分析已经排好并结构化的传统时家奇门局式，按固�
 - [策略引擎](rules/strategy-engine.md)
 - [规则可信度](rules/rule-confidence.md)
 
-不要一次加载所有专项模块。工作问题读取[职业模块](modules/career/README.md)；感情问题读取[感情模块](modules/relationship/README.md)；商业财运问题读取[商业财运模块](modules/commerce/README.md)；考试、成绩、录取或资格认证问题读取[考试模块](modules/exam/README.md)；健康、疾病、就医或恢复问题读取[健康模块](modules/health/README.md)；旅行、出差、迁移或返程问题读取[出行模块](modules/travel/README.md)；失物、宠物走失、失联或寻人问题读取[寻人寻物模块](modules/lost-and-missing/README.md)；比较已排好的候选时间盘或候选方向时读取[择时方位模块](modules/timing-direction/README.md)。用户询问自然发生时间时再读取[候选应期系统](rules/timing.md)；同一问题有多个局时再读取[多局连续比较](rules/multi-chart-comparison.md)。其他类别只有对应模块标记为可用时才读取，不得跨模块外推规则。
+不要一次加载所有专项模块。工作问题读取[职业模块](modules/career/README.md)；感情问题读取[感情模块](modules/relationship/README.md)；商业财运问题读取[商业财运模块](modules/commerce/README.md)，其中股票或 ETF 十日走势再按模块路由读取专用固定格式；考试、成绩、录取或资格认证问题读取[考试模块](modules/exam/README.md)；健康、疾病、就医或恢复问题读取[健康模块](modules/health/README.md)；旅行、出差、迁移或返程问题读取[出行模块](modules/travel/README.md)；失物、宠物走失、失联或寻人问题读取[寻人寻物模块](modules/lost-and-missing/README.md)；比较已排好的候选时间盘或候选方向时读取[择时方位模块](modules/timing-direction/README.md)。用户询问自然发生时间时再读取[候选应期系统](rules/timing.md)；同一问题有多个局时再读取[多局连续比较](rules/multi-chart-comparison.md)。其他类别只有对应模块标记为可用时才读取，不得跨模块外推规则。
 
 ## 调度流程
 
@@ -87,6 +87,7 @@ description: 分析已经排好并结构化的传统时家奇门局式，按固�
 - 重排盘或静默修改输入。
 - 不解释原因就更换用神；机械地永远用日干或永远用年命。
 - 将六爻世应直接等同于奇门取用。
+- 股票预测借用六爻的逐日输出形式时，把六亲、世应、日月建或动爻规则混入奇门证据链。
 - 将空亡解释成“一定没有”，将反吟解释成“一定不成”。
 - 将吉门、凶门、旺、弱直接等同于最终吉凶。
 - 看到地支、空亡、冲、合或马星就直接报必应日期或必然事件。
