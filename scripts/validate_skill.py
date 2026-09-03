@@ -219,8 +219,8 @@ class Validator:
                 self.error(f"missing V1.2 authority file: {relative}")
 
         version = self.read(self.root / "VERSION").strip()
-        if version != "1.2.1":
-            self.error(f"VERSION must be 1.2.1, found {version!r}")
+        if version != "1.2.4":
+            self.error(f"VERSION must be 1.2.4, found {version!r}")
 
         standard = self.read(self.root / "output" / "standard-analysis.md")
         expected_headings = [
@@ -263,10 +263,12 @@ class Validator:
             self.root / "modules" / "commerce" / "stock-ten-day-forecast.md"
         )
         for phrase in (
-            "【未来十个交易日总览】",
-            "【十个交易日逐日预测】",
-            "| T+1 |",
-            "| T+10 |",
+            "【现实市场快照】",
+            "【奇门十日总览】",
+            "【奇门 × 现实比对】",
+            "【未来十个实际交易日逐日预测】",
+            "具体日期 + 星期",
+            "逐日推演",
             "强势上行",
             "明显下行",
             "六爻世应",

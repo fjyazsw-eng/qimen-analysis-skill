@@ -6,7 +6,7 @@
 case_id: ""
 forecast_id: ""
 created_at: ""
-skill_version: "1.2.1"
+skill_version: "1.2.2"
 question: ""
 target_event: ""
 event_chain_stage: ""

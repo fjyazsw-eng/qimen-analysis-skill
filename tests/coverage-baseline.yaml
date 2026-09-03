@@ -1,5 +1,5 @@
-schema_version: "1.2.1"
-minimum_total: 168
+schema_version: "1.2.4"
+minimum_total: 177
 minimum_by_file:
   interaction-scenarios.yaml: 8
   chart-synthesis-scenarios.yaml: 12
@@ -15,4 +15,4 @@ minimum_by_file:
   prediction-strategy-scenarios.yaml: 12
   timing-scenarios.yaml: 12
   multi-chart-scenarios.yaml: 10
-  stock-ten-day-scenarios.yaml: 12
+  stock-ten-day-scenarios.yaml: 18
