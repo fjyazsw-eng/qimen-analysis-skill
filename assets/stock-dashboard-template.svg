@@ -1,1 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1536 1024"><rect width="1536" height="1024" fill="#fff"/><rect width="1536" height="55" fill="#08224a"/><g fill="none" stroke="#222" stroke-width="2"><rect x="8" y="62" width="482" height="388"/><rect x="496" y="62" width="584" height="388"/><rect x="1086" y="62" width="442" height="388"/><rect x="8" y="460" width="1072" height="540"/><rect x="1086" y="460" width="442" height="260"/><rect x="1086" y="730" width="442" height="270"/></g><g fill="#910000"><rect x="8" y="62" width="482" height="40"/><rect x="496" y="62" width="584" height="40"/><rect x="1086" y="62" width="442" height="40"/><rect x="8" y="460" width="1072" height="42"/><rect x="1086" y="460" width="442" height="42"/><rect x="1086" y="730" width="442" height="42"/></g><g font-family="sans-serif" font-size="22" fill="#fff"><text x="24" y="90">一、最新行情</text><text x="512" y="90">二、奇门十日节奏曲线</text><text x="1102" y="90">三、关键价格区域</text><text x="330" y="489">四、未来十个交易日操作计划表</text><text x="1110" y="489">五、卦象定性判断</text><text x="1110" y="759">六、综合结论</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<rect width="1600" height="900" fill="#fff"/><rect width="1600" height="58" fill="#08224a"/>
+<g fill="none" stroke="#222" stroke-width="2">
+<rect x="10" y="68" width="490" height="322"/><rect x="510" y="68" width="580" height="322"/><rect x="1100" y="68" width="490" height="322"/>
+<rect x="10" y="400" width="1080" height="485"/><rect x="1100" y="400" width="490" height="235"/><rect x="1100" y="645" width="490" height="240"/>
+</g>
+<g fill="#910000">
+<rect x="10" y="68" width="490" height="38"/><rect x="510" y="68" width="580" height="38"/><rect x="1100" y="68" width="490" height="38"/>
+<rect x="10" y="400" width="1080" height="38"/><rect x="1100" y="400" width="490" height="38"/><rect x="1100" y="645" width="490" height="38"/>
+</g>
+<g font-family="sans-serif" font-size="18" fill="#fff">
+<text x="22" y="94">一、最新行情</text><text x="522" y="94">二、奇门十日节奏曲线（未来十个交易日）</text><text x="1112" y="94">三、关键价格区域（元）/关键观察信号</text>
+<text x="300" y="426">四、未来十个交易日操作计划表</text><text x="1112" y="426">五、卦象定性判断</text><text x="1112" y="671">六、综合结论</text>
+</g>
+</svg>
