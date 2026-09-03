@@ -16,7 +16,7 @@
 - 买卖、交易、谈判、中介：[交易与谈判](transaction-negotiation.md)
 - 工资、副业、经营收入、回款、借贷：[收入与现金流](income-cashflow.md)
 - 一般基金、资产配置、投机机会：[投资风险](investment-risk.md)
-- **明确要求股票或 ETF 未来十个交易日走势：必须同时读取 [股票十日预测](stock-ten-day-forecast.md) + [股票六模块图片固定协议](stock-image-protocol.md) + 投资风险边界。V1.2.6 图片协议优先于旧版图片描述。**
+- **明确要求股票或 ETF 未来十个交易日走势：必须同时读取 [股票十日预测](stock-ten-day-forecast.md) + [股票六模块图片固定协议](stock-image-protocol.md) + 投资风险边界。当前 `VERSION` 对应的图片协议优先于旧版图片描述。**
 
 ## 固定证据链
 
