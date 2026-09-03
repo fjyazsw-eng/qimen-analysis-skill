@@ -6,7 +6,8 @@
 case_id: ""
 forecast_id: ""
 created_at: ""
-skill_version: "1.2.2"
+skill_version: "1.2.4"
+analysis_fingerprint: ""
 question: ""
 target_event: ""
 event_chain_stage: ""
@@ -17,6 +18,11 @@ yongshen:
   primary: []
   secondary: []
 qualitative_rating: "大吉|吉|小吉|平偏吉|平|平偏凶|小凶|凶|大凶"
+evidence_ledger:
+  support: []
+  resistance: []
+  modifiers: []
+  uncertainties: []
 current_state: ""
 forecast_trend: ""
 event_tree: []
@@ -39,8 +45,4 @@ post_hoc_findings: []
 rule_change_candidates: []
 ```
 
-## 回测口径
-
-按目标事件逐项统计命中与时间误差，不把更早阶段算成最终事件命中。可以分别统计用神宫触发、冲墓、出空、连续触宫、马星等规则，但必须公开样本量、适用问题、排除标准、未决案例和失败案例。
-
-传统来源强不等于现实命中率高。规则调整必须遵守[规则可信度](../rules/rule-confidence.md)和[前瞻案例协议](../tests/forward-test-protocol.md)。
+同一 `analysis_fingerprint` 再次分析时，必须先读取冻结台账，核对取用、九级定性、主趋势、关键转折与已冻结应期/逐日方向。没有合法变化原因却出现不同结论时，标记为“分析漂移”，不得覆盖旧记录。

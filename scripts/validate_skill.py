@@ -205,6 +205,7 @@ class Validator:
     def validate_v12_contract(self) -> None:
         required = [
             "rules/qualitative-rating.md",
+            "rules/analysis-stability.md",
             "rules/future-event-tree.md",
             "rules/timing.md",
             "rules/multi-chart-comparison.md",
@@ -263,10 +264,11 @@ class Validator:
             self.root / "modules" / "commerce" / "stock-ten-day-forecast.md"
         )
         for phrase in (
-            "【现实市场快照】",
-            "【奇门十日总览】",
-            "【奇门 × 现实比对】",
-            "【未来十个实际交易日逐日预测】",
+            "第一部分｜文奷情况",
+            "第二部分｜固定六模块图片",
+            "当前行情",
+            "卦象定性判断",
+            "总体结论 & 关键提示",
             "具体日期 + 星期",
             "逐日推演",
             "强势上行",
