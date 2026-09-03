@@ -1,4 +1,4 @@
-# 股票六模块图片固定协议 V1.2.8
+# 股票六模块图片固定协议 V1.2.9
 
 本文件是 `stock-ten-day-forecast.md` 的图片执行层。正式股票/ETF十日图必须采用确定性程序化渲染，以 `assets/stock-dashboard-template.svg` 为官方六模块视觉骨架。
 
