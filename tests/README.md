@@ -71,3 +71,5 @@ V1.2 使用[预测策略场景](prediction-strategy-scenarios.yaml)、[候选应
 V1.2.4 使用[股票十日预测场景](stock-ten-day-scenarios.yaml)验证联网现实核验、具体交易日期、逐日独立触发、奇门/现实双轨比对、图表一致性、六爻格式借鉴边界和金融安全；不证明股票预测有效性。
 
 各场景文件的最低数量由[覆盖基线](coverage-baseline.yaml)维护。删除、合并或降低场景数量时必须说明对应规则为何不再需要，并同步人工评审记录。
+
+V1.4.0 盘内寻机与趋避转化使用 [strategy-transformation-scenarios.yaml](strategy-transformation-scenarios.yaml) 验证生机宫准入、吉象误用防护、解局不改判、门星双旺衰和值符值使强制检查。
